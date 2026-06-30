@@ -1,0 +1,11 @@
+comando para executar:
+
+taskkill /F /IM pc_information.exe
+
+rmdir /S /Q build
+rmdir /S /Q dist
+
+del /F /Q pc_information.spec
+
+python -m PyInstaller --onefile --noconsole --clean --icon=Windows.ico --add-data "Windows.ico;." pc_information.py
+
